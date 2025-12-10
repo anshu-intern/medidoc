@@ -71,3 +71,5 @@ This application runs locally and assumes a single user for simplicity (no authe
 ![POST http://localhost:8080/api/documents/upload](image-1.png)
 ![GET http://localhost:8080/api/documents/21](image-2.png)
 ![DELETE http://localhost:8080/api/documents/21](image-3.png)
+![](image-4.png)
+![](image-5.png)
