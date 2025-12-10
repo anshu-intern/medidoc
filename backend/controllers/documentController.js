@@ -52,7 +52,15 @@ export const getDocumentById = async (req, res) => {
 
         if (!document) return res.status(404).json({ success: false, message: 'Document not found!' });
 
-        return res.status(200).json({ success: true, data: document });
+        if (!fs.existsSync(document.filepath)) return res.status(404).json({ success: false, message: 'File not found on server!' });
+
+        return res.download(document.filepath, document.filename, (err) => { 
+            if (err) {
+                if (!res.headersSent) {
+                    return res.status(500).json({ success: false, message: 'Error downloading file.' });
+                }
+            }
+        });
     }
     catch(err){
         return res.status(500).json({ success : false , message : err.message || "Internal server error."});
