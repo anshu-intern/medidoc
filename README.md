@@ -32,8 +32,8 @@ This application runs locally and assumes a single user for simplicity (no authe
     Run the application locally. Follw the below steps to setup:
 
     1. Clone the Repository
-        git clone <your-repo-url>
-        cd <your-project-folder>
+        git clone https://github.com/anshu-intern/medidoc.git
+        cd medidoc
 
     2. Navigate to the Backend
         cd backend
